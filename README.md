@@ -10,4 +10,4 @@ Second, because this was meant for a pirated game and I do not encourge pirating
 - What is the programming language of this Panel?
 Simple answer: PHP.
 - Got any other questions?
-You can contact me: admin@daryandev.com
+You can contact me: [admin@daryandev.com](mailto:admin@daryandev.com)
