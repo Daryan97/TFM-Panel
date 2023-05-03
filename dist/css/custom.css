@@ -1,0 +1,11 @@
+.banner-home {
+    background: url(../../images/4.png);
+    border: 1px solid rgba(0,0,0, 0.50);
+    border-radius: .25rem;
+}
+
+.banner-topic {
+    background: url(../../images/4.png);
+    border: 1px solid rgba(0,0,0, 0.50);
+    border-radius: 1rem;
+}
