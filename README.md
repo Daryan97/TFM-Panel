@@ -19,3 +19,10 @@ Simple answer: PHP.
 **- Got any other questions?**
 
 You can contact me: [admin@daryandev.com](mailto:admin@daryandev.com)
+
+# Credits
+- AdminLTE 3 Dashboard: [https://adminlte.io/themes/v3/](https://adminlte.io/themes/v3/)
+- Bootstrap 4: [https://getbootstrap.com/](https://getbootstrap.com/)
+- JQuery 3: [https://jquery.com/](https://jquery.com/)
+- FontAwesome 4: [https://fontawesome.com/](https://fontawesome.com/)
+- toastr: [https://github.com/CodeSeven/toastr](https://github.com/CodeSeven/toastr)
