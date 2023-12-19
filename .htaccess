@@ -1,0 +1,4 @@
+SetEnv MYSQL_HOST localhost
+SetEnv MYSQL_USER root
+SetEnv MYSQL_PASS 
+SetEnv MYSQL_DB transformice

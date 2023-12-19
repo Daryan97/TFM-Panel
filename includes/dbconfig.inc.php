@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "transformice";
+$servername = $_SERVER['MYSQL_HOST'];
+$dbusername = $_SERVER['MYSQL_USER'];
+$dbpassword = $_SERVER['MYSQL_PASS'];
+$dbname = $_SERVER['MYSQL_DB'];
 
 $con = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 

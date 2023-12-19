@@ -9,11 +9,30 @@ if (isset($_POST['deleteBtn']) && $privLevel >= 5) {
         $deleteList[] = $value;
     }
     $topicIDs = implode("','", $deleteList);
-    $sql = "DELETE FROM cafetopics WHERE TopicID IN ('" . $topicIDs . "')";
-    mysqli_multi_query($con, $sql);
-
-    $sqlposts = "DELETE FROM cafeposts WHERE TopicID IN ('" . $topicIDs . "')";
-    mysqli_multi_query($con, $sqlposts);
+    
+    // Prepare the DELETE query for cafetopics table
+    $sql = "DELETE FROM cafetopics WHERE TopicID IN (";
+    $params = array();
+    foreach ($deleteList as $key => $value) {
+        $sql .= "?,";
+        $params[] = $value;
+    }
+    $sql = rtrim($sql, ',') . ")";
+    $stmt = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($stmt, str_repeat('s', count($params)), ...$params);
+    mysqli_stmt_execute($stmt);
+    
+    // Prepare the DELETE query for cafeposts table
+    $sqlposts = "DELETE FROM cafeposts WHERE TopicID IN (";
+    $paramsPosts = array();
+    foreach ($deleteList as $key => $value) {
+        $sqlposts .= "?,";
+        $paramsPosts[] = $value;
+    }
+    $sqlposts = rtrim($sqlposts, ',') . ")";
+    $stmtPosts = mysqli_prepare($con, $sqlposts);
+    mysqli_stmt_bind_param($stmtPosts, str_repeat('s', count($paramsPosts)), ...$paramsPosts);
+    mysqli_stmt_execute($stmtPosts);
 
     header('location: /cafe/topics.php');
 } else {

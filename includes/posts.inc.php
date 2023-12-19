@@ -10,10 +10,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                             </a>
                             <div class="dropdown-menu dropdown-menu-right p-0">
                               <a href="#" class="dropdown-item">
-                                <i class="fa fa-trash"></i> Delete this comment
+                                <i class="fa fa-trash"></i> Delete this comment (WIP)
                               </a>
                               <a href="#" class="dropdown-item">
-                                <i class="fa fa-trash-alt"></i> Delete all by ' . $fullname . '
+                                <i class="fa fa-trash-alt"></i> Delete all by ' . $fullname . ' (WIP)
                               </a>
                           </li>
                         </ul>';
@@ -24,10 +24,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                             </a>
                             <div class="dropdown-menu dropdown-menu-left p-0">
                               <a href="#" class="dropdown-item">
-                                <i class="fa fa-trash"></i> Delete this comment
+                                <i class="fa fa-trash"></i> Delete this comment (WIP)
                               </a>
                               <a href="#" class="dropdown-item">
-                                <i class="fa fa-trash-alt"></i> Delete all by ' . $fullname . '
+                                <i class="fa fa-trash-alt"></i> Delete all by ' . $fullname . ' (WIP)
                               </a>
                           </li>
                         </ul>';

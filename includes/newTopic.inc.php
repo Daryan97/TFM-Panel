@@ -33,7 +33,7 @@ if ($_SESSION['postcooldown'] < time()) {
         mysqli_stmt_bind_param($stmt, 'sis', $title, $userID, $lang);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
-        mysqli_query($con, $sql);
+        // mysqli_query($con, $sql);
         $topicID = mysqli_insert_id($con);
         $sqlPost = "INSERT INTO cafeposts (TopicID, AuthorID, Post, Date, Points, Votes) VALUES (?, ?, ?, ?, ?, ?)";
         $stmtPost = mysqli_stmt_init($con);
